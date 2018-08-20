@@ -11,7 +11,7 @@ shiny_code_repo/data_processing/emr_template_summary.Rmd
 shiny_code_repo/data_processing/table_outcomes.R
 shiny_code_repo/data_processing/standard_board.R
 shiny_code_repo/data_processing/satisfaction_outcomes.R
-
+shiny_code_repo/data_processing/alternate_report.rtf
 shiny_code_repo/survey_processing/addNewOutpatients.R
 shiny_code_repo/survey_processing/getSurveyOutpatents.R
 shiny_code_repo/survey_processing/validation_email.R
