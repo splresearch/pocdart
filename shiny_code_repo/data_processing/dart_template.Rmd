@@ -1,0 +1,37 @@
+---
+pagetitle: "`r params$title`"
+output: html_document
+params:
+  data: ""
+  completion: ""
+  instance: ""
+  assessment: ""
+  summary: ""
+  title: ""
+---
+POCDART Demonstration Report
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(kableExtra)
+```
+```{r immediateReport, echo=FALSE,message=FALSE,results='asis'}
+cat('<h4><u>',params$completion,params$instance,'</u></h4>')
+x = kable(params$assessment, format="html",escape = FALSE,row.names = FALSE) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+z = kable(params$data, format="html",escape = FALSE,row.names = FALSE) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+if(!is.null(params$assessment)){gsub("<thead>.*</thead>", "", x)}
+if(any(grepl("\\*<\\/font>", params$assessment[,2])) || any(grepl("\\*<\\/font>", params$assessment[,5]))){cat("<br><i>* - higher score means better function</i><br>")}
+if(!is.null(params$data)){cat("<h4><u>Timeline</u></h4>")
+cat(z)
+kable(params$data, format="html",escape = FALSE,row.names = FALSE) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+cat("<h4><u>Interpretation</u></h4>")
+for (i in (i = 1:length(params$summary))){
+  cat(params$summary[i])
+  cat('<br><br>')
+}
+}
+```

@@ -1,0 +1,20 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fcharset0 Verdana;}{\f2\fcharset0 Tahoma;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\deflang1033 \plain \fs18 \widowctrl \hyphauto \ftnbj
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+{\pard \qc \i \f0 \li0 \fi0 \fs20 $title$\par}
+$endif$
+$if(toc)$
+$table-of-contents$
+$endif$
+$for(include-before)$
+$include-before$
+$endfor$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$}

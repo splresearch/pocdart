@@ -1,0 +1,53 @@
+.loaderSpecial {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.CopyTable {
+    border: 1px solid black;
+    border-spacing: 5px;
+    border-collapse: collapse;
+    text-align: center;
+}
+.CopyTable td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.CopyTable th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+@media print {
+    body * {
+        visibility:hidden;
+    }
+    #printSection, #printSection * {
+        visibility:visible;
+    }
+    #printSection {
+        position:absolute;
+        width:400px;
+         height:300px;
+         z-index:15;
+         top:50%;
+         left:50%;
+         margin:-300px 0 0 -200px;
+    }
+}
