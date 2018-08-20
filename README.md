@@ -102,10 +102,6 @@ dart_cron.R regenerates surveys, allowing users to always have an up to date sur
 
 update_cron.R continuously updates local redcap data for up to date reports, survey completions, etc. If using a database to populate new patients, this can also be edited to check and add new patients.
 
-### Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [REDCap](https://www.project-redcap.org/) - Survey creation and database
@@ -113,16 +109,10 @@ Add additional notes about how to deploy this on a live system
 * [R](https://www.r-project.org/) - Code backbone of POCDART
 * [RStudio Shiny Server](https://www.rstudio.com/products/shiny/shiny-server/) - 
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Andrew Ready** - *Initial work* - Sheppard-Pratt Lieber Research Institute
 * **Alexander Maclay** - *Initial work* - Sheppard-Pratt Lieber Research Institute
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
